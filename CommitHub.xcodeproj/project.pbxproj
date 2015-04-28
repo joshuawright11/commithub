@@ -13,18 +13,7 @@
 		039C7DED1AEF676E002DAA78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039C7DEB1AEF676E002DAA78 /* Main.storyboard */; };
 		039C7DEF1AEF676E002DAA78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 039C7DEE1AEF676E002DAA78 /* Images.xcassets */; };
 		039C7DF21AEF676E002DAA78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 039C7DF01AEF676E002DAA78 /* LaunchScreen.xib */; };
-		039C7DFE1AEF676E002DAA78 /* CommitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C7DFD1AEF676E002DAA78 /* CommitHubTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		039C7DF81AEF676E002DAA78 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 039C7DD81AEF676E002DAA78 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 039C7DDF1AEF676E002DAA78;
-			remoteInfo = CommitHub;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		039C7DE01AEF676E002DAA78 /* CommitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,20 +24,10 @@
 		039C7DEC1AEF676E002DAA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		039C7DEE1AEF676E002DAA78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		039C7DF11AEF676E002DAA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		039C7DF71AEF676E002DAA78 /* CommitHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommitHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		039C7DFC1AEF676E002DAA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		039C7DFD1AEF676E002DAA78 /* CommitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitHubTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		039C7DDD1AEF676E002DAA78 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		039C7DF41AEF676E002DAA78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				039C7DE21AEF676E002DAA78 /* CommitHub */,
-				039C7DFA1AEF676E002DAA78 /* CommitHubTests */,
 				039C7DE11AEF676E002DAA78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				039C7DE01AEF676E002DAA78 /* CommitHub.app */,
-				039C7DF71AEF676E002DAA78 /* CommitHubTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,23 +75,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		039C7DFA1AEF676E002DAA78 /* CommitHubTests */ = {
-			isa = PBXGroup;
-			children = (
-				039C7DFD1AEF676E002DAA78 /* CommitHubTests.swift */,
-				039C7DFB1AEF676E002DAA78 /* Supporting Files */,
-			);
-			path = CommitHubTests;
-			sourceTree = "<group>";
-		};
-		039C7DFB1AEF676E002DAA78 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				039C7DFC1AEF676E002DAA78 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,24 +95,6 @@
 			productReference = 039C7DE01AEF676E002DAA78 /* CommitHub.app */;
 			productType = "com.apple.product-type.application";
 		};
-		039C7DF61AEF676E002DAA78 /* CommitHubTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 039C7E041AEF676E002DAA78 /* Build configuration list for PBXNativeTarget "CommitHubTests" */;
-			buildPhases = (
-				039C7DF31AEF676E002DAA78 /* Sources */,
-				039C7DF41AEF676E002DAA78 /* Frameworks */,
-				039C7DF51AEF676E002DAA78 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				039C7DF91AEF676E002DAA78 /* PBXTargetDependency */,
-			);
-			name = CommitHubTests;
-			productName = CommitHubTests;
-			productReference = 039C7DF71AEF676E002DAA78 /* CommitHubTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -164,10 +106,6 @@
 				TargetAttributes = {
 					039C7DDF1AEF676E002DAA78 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					039C7DF61AEF676E002DAA78 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 039C7DDF1AEF676E002DAA78;
 					};
 				};
 			};
@@ -185,7 +123,6 @@
 			projectRoot = "";
 			targets = (
 				039C7DDF1AEF676E002DAA78 /* CommitHub */,
-				039C7DF61AEF676E002DAA78 /* CommitHubTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,13 +135,6 @@
 				039C7DED1AEF676E002DAA78 /* Main.storyboard in Resources */,
 				039C7DF21AEF676E002DAA78 /* LaunchScreen.xib in Resources */,
 				039C7DEF1AEF676E002DAA78 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		039C7DF51AEF676E002DAA78 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,23 +151,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		039C7DF31AEF676E002DAA78 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				039C7DFE1AEF676E002DAA78 /* CommitHubTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		039C7DF91AEF676E002DAA78 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 039C7DDF1AEF676E002DAA78 /* CommitHub */;
-			targetProxy = 039C7DF81AEF676E002DAA78 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		039C7DEB1AEF676E002DAA78 /* Main.storyboard */ = {
@@ -356,40 +270,6 @@
 			};
 			name = Release;
 		};
-		039C7E051AEF676E002DAA78 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CommitHubTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommitHub.app/CommitHub";
-			};
-			name = Debug;
-		};
-		039C7E061AEF676E002DAA78 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CommitHubTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommitHub.app/CommitHub";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -407,14 +287,6 @@
 			buildConfigurations = (
 				039C7E021AEF676E002DAA78 /* Debug */,
 				039C7E031AEF676E002DAA78 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		039C7E041AEF676E002DAA78 /* Build configuration list for PBXNativeTarget "CommitHubTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				039C7E051AEF676E002DAA78 /* Debug */,
-				039C7E061AEF676E002DAA78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
