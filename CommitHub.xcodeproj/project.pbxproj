@@ -13,6 +13,17 @@
 		039C7DED1AEF676E002DAA78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039C7DEB1AEF676E002DAA78 /* Main.storyboard */; };
 		039C7DEF1AEF676E002DAA78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 039C7DEE1AEF676E002DAA78 /* Images.xcassets */; };
 		039C7DF21AEF676E002DAA78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 039C7DF01AEF676E002DAA78 /* LaunchScreen.xib */; };
+		03BEA68E1AF7A5E900AB18A8 /* CHObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA68D1AF7A5E900AB18A8 /* CHObject.swift */; };
+		03BEA6901AF7A60B00AB18A8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA68F1AF7A60B00AB18A8 /* Repository.swift */; };
+		03BEA6921AF7A68300AB18A8 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA6911AF7A68300AB18A8 /* Commit.swift */; };
+		03BEA6941AF7A6F200AB18A8 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA6931AF7A6F200AB18A8 /* Issue.swift */; };
+		03BEA6961AF7A73E00AB18A8 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA6951AF7A73E00AB18A8 /* WebServices.swift */; };
+		03BEA6991AF7A78500AB18A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA6981AF7A78500AB18A8 /* Constants.swift */; };
+		03BEA69B1AF7A78E00AB18A8 /* Defs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA69A1AF7A78E00AB18A8 /* Defs.swift */; };
+		03BEA69D1AF7A79900AB18A8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA69C1AF7A79900AB18A8 /* Utilities.swift */; };
+		03BEA69F1AF7A7B700AB18A8 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA69E1AF7A7B700AB18A8 /* AuthManager.swift */; };
+		03BEA6A11AF7A7E800AB18A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA6A01AF7A7E800AB18A8 /* User.swift */; };
+		03BEA6A31AF7A8C600AB18A8 /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BEA6A21AF7A8C600AB18A8 /* PullRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		039C7DEC1AEF676E002DAA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		039C7DEE1AEF676E002DAA78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		039C7DF11AEF676E002DAA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		03BEA68D1AF7A5E900AB18A8 /* CHObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHObject.swift; sourceTree = "<group>"; };
+		03BEA68F1AF7A60B00AB18A8 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		03BEA6911AF7A68300AB18A8 /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		03BEA6931AF7A6F200AB18A8 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		03BEA6951AF7A73E00AB18A8 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		03BEA6981AF7A78500AB18A8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		03BEA69A1AF7A78E00AB18A8 /* Defs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defs.swift; sourceTree = "<group>"; };
+		03BEA69C1AF7A79900AB18A8 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		03BEA69E1AF7A7B700AB18A8 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		03BEA6A01AF7A7E800AB18A8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		03BEA6A21AF7A8C600AB18A8 /* PullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 		039C7DE21AEF676E002DAA78 /* CommitHub */ = {
 			isa = PBXGroup;
 			children = (
+				03BEA6A41AF7A99C00AB18A8 /* WebServices */,
 				039C7DE51AEF676E002DAA78 /* AppDelegate.swift */,
 				039C7DE71AEF676E002DAA78 /* FirstViewController.swift */,
 				039C7DE91AEF676E002DAA78 /* SecondViewController.swift */,
@@ -63,6 +86,8 @@
 				039C7DEE1AEF676E002DAA78 /* Images.xcassets */,
 				039C7DF01AEF676E002DAA78 /* LaunchScreen.xib */,
 				039C7DE31AEF676E002DAA78 /* Supporting Files */,
+				03BEA6971AF7A76200AB18A8 /* Utilities */,
+				03BEA68A1AF7A58800AB18A8 /* Model */,
 			);
 			path = CommitHub;
 			sourceTree = "<group>";
@@ -73,6 +98,38 @@
 				039C7DE41AEF676E002DAA78 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03BEA68A1AF7A58800AB18A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03BEA68D1AF7A5E900AB18A8 /* CHObject.swift */,
+				03BEA68F1AF7A60B00AB18A8 /* Repository.swift */,
+				03BEA6911AF7A68300AB18A8 /* Commit.swift */,
+				03BEA6931AF7A6F200AB18A8 /* Issue.swift */,
+				03BEA6A01AF7A7E800AB18A8 /* User.swift */,
+				03BEA6A21AF7A8C600AB18A8 /* PullRequest.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		03BEA6971AF7A76200AB18A8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				03BEA6981AF7A78500AB18A8 /* Constants.swift */,
+				03BEA69A1AF7A78E00AB18A8 /* Defs.swift */,
+				03BEA69C1AF7A79900AB18A8 /* Utilities.swift */,
+				03BEA69E1AF7A7B700AB18A8 /* AuthManager.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		03BEA6A41AF7A99C00AB18A8 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				03BEA6951AF7A73E00AB18A8 /* WebServices.swift */,
+			);
+			name = WebServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +202,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BEA6A11AF7A7E800AB18A8 /* User.swift in Sources */,
+				03BEA6921AF7A68300AB18A8 /* Commit.swift in Sources */,
+				03BEA6A31AF7A8C600AB18A8 /* PullRequest.swift in Sources */,
+				03BEA69F1AF7A7B700AB18A8 /* AuthManager.swift in Sources */,
+				03BEA6941AF7A6F200AB18A8 /* Issue.swift in Sources */,
+				03BEA69D1AF7A79900AB18A8 /* Utilities.swift in Sources */,
 				039C7DEA1AEF676E002DAA78 /* SecondViewController.swift in Sources */,
 				039C7DE61AEF676E002DAA78 /* AppDelegate.swift in Sources */,
+				03BEA6901AF7A60B00AB18A8 /* Repository.swift in Sources */,
 				039C7DE81AEF676E002DAA78 /* FirstViewController.swift in Sources */,
+				03BEA6961AF7A73E00AB18A8 /* WebServices.swift in Sources */,
+				03BEA69B1AF7A78E00AB18A8 /* Defs.swift in Sources */,
+				03BEA68E1AF7A5E900AB18A8 /* CHObject.swift in Sources */,
+				03BEA6991AF7A78500AB18A8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CommitHub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -265,6 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CommitHub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -289,6 +359,7 @@
 				039C7E031AEF676E002DAA78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
