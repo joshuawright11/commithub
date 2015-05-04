@@ -1,7 +1,7 @@
 CommitHub
 ===============
 
-A GitHub iOS interface for learning swift and strengthening app development
+A GitHub iOS client
 
 to run:
 
