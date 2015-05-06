@@ -7,11 +7,24 @@
 //
 
 import Foundation
+import Alamofire
 
 class WebServices: NSObject {
     
     class HTTPRequest {
-    
+        var url: String
+
+        init(url:String){
+            self.url = url;
+        }
+        
+        func request() -> (code:Int, response:String){
+            Alamofire.request(.GET, url)
+                .responseString { (_, _, string, _) in
+                    println(string)
+            }
+            return (0, "hi");
+        }
     }
     
     class POSTRequest: HTTPRequest {
