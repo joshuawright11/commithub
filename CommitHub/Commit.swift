@@ -6,8 +6,11 @@
 //  Copyright (c) 2015 Josh Wright and Paul Haefliger. All rights reserved.
 //
 
-import UIKit
+import SwiftyJSON
 
 class Commit: CHObject {
-   
+    
+    init(json: JSON) {
+        super.init(url: json["url"].string);
+    }
 }

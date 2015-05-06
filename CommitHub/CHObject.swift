@@ -6,8 +6,19 @@
 //  Copyright (c) 2015 Josh Wright and Paul Haefliger. All rights reserved.
 //
 
-import UIKit
+import SwiftyJSON
 
-class CHObject: NSObject {
-   
+class CHObject : NSObject{
+    
+    /// The location of this object on the GitHub API.
+    let url:String;
+    
+    init(url: String?) {
+        if let url = url{
+            /// TODO: parse off base url
+            self.url = url;
+        }else{
+            self.url = "";
+        }
+    }
 }

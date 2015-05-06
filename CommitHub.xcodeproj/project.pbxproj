@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031DB9E81AFA55470081CEBC /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9E71AFA55470081CEBC /* Alamofire-SwiftyJSON.swift */; };
+		031DB9EA1AFA708D0081CEBC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9E91AFA708D0081CEBC /* Event.swift */; };
+		031DB9EC1AFA72540081CEBC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9EB1AFA72540081CEBC /* Comment.swift */; };
 		039C7DE61AEF676E002DAA78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C7DE51AEF676E002DAA78 /* AppDelegate.swift */; };
 		039C7DE81AEF676E002DAA78 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C7DE71AEF676E002DAA78 /* FirstViewController.swift */; };
 		039C7DEA1AEF676E002DAA78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C7DE91AEF676E002DAA78 /* SecondViewController.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031DB9E71AFA55470081CEBC /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
+		031DB9E91AFA708D0081CEBC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		031DB9EB1AFA72540081CEBC /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		039C7DE01AEF676E002DAA78 /* CommitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		039C7DE41AEF676E002DAA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		039C7DE51AEF676E002DAA78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031DB9E61AFA55180081CEBC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				031DB9E71AFA55470081CEBC /* Alamofire-SwiftyJSON.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		032155381AFA1D6200DFED89 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				039C7DE71AEF676E002DAA78 /* FirstViewController.swift */,
+				039C7DE91AEF676E002DAA78 /* SecondViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		039C7DD71AEF676E002DAA78 = {
 			isa = PBXGroup;
 			children = (
@@ -87,13 +110,13 @@
 			children = (
 				03BEA6A41AF7A99C00AB18A8 /* WebServices */,
 				039C7DE51AEF676E002DAA78 /* AppDelegate.swift */,
-				039C7DE71AEF676E002DAA78 /* FirstViewController.swift */,
-				039C7DE91AEF676E002DAA78 /* SecondViewController.swift */,
 				039C7DEB1AEF676E002DAA78 /* Main.storyboard */,
 				039C7DEE1AEF676E002DAA78 /* Images.xcassets */,
 				039C7DF01AEF676E002DAA78 /* LaunchScreen.xib */,
+				032155381AFA1D6200DFED89 /* Controllers */,
 				039C7DE31AEF676E002DAA78 /* Supporting Files */,
 				03BEA6971AF7A76200AB18A8 /* Utilities */,
+				031DB9E61AFA55180081CEBC /* Extensions */,
 				03BEA68A1AF7A58800AB18A8 /* Model */,
 			);
 			path = CommitHub;
@@ -116,6 +139,8 @@
 				03BEA6931AF7A6F200AB18A8 /* Issue.swift */,
 				03BEA6A01AF7A7E800AB18A8 /* User.swift */,
 				03BEA6A21AF7A8C600AB18A8 /* PullRequest.swift */,
+				031DB9E91AFA708D0081CEBC /* Event.swift */,
+				031DB9EB1AFA72540081CEBC /* Comment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -282,8 +307,11 @@
 				03BEA6A31AF7A8C600AB18A8 /* PullRequest.swift in Sources */,
 				03BEA69F1AF7A7B700AB18A8 /* AuthManager.swift in Sources */,
 				03BEA6941AF7A6F200AB18A8 /* Issue.swift in Sources */,
+				031DB9EC1AFA72540081CEBC /* Comment.swift in Sources */,
 				03BEA69D1AF7A79900AB18A8 /* Utilities.swift in Sources */,
 				039C7DEA1AEF676E002DAA78 /* SecondViewController.swift in Sources */,
+				031DB9E81AFA55470081CEBC /* Alamofire-SwiftyJSON.swift in Sources */,
+				031DB9EA1AFA708D0081CEBC /* Event.swift in Sources */,
 				039C7DE61AEF676E002DAA78 /* AppDelegate.swift in Sources */,
 				03BEA6901AF7A60B00AB18A8 /* Repository.swift in Sources */,
 				039C7DE81AEF676E002DAA78 /* FirstViewController.swift in Sources */,
