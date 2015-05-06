@@ -12,9 +12,6 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var thing:WebServices.HTTPRequest = WebServices.HTTPRequest(url: "http://httpbin.org/get");
-        thing.request();
     }
 
 }
-
