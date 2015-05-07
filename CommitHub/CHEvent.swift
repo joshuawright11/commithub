@@ -1,20 +1,22 @@
 //
-//  PullRequest.swift
+//  Event.swift
 //  CommitHub
 //
-//  Created by Josh Wright on 5/4/15.
+//  Created by Josh Wright on 5/7/15.
 //  Copyright (c) 2015 Josh Wright and Paul Haefliger. All rights reserved.
 //
 
 import SwiftyJSON
 
-class PullRequest: CHObject {
+class CHEvent: CHObject {
     
-    let issue: Issue
+    let user:User
+    let repo:Repository
     
     init(json: JSON) {
         
-        issue = Issue(json: json)
+        user = User(json: json["actor"])
+        repo = Repository(json: json["repo"])
         
         super.init(url: json["url"].string);
     }

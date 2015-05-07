@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		031DB9E81AFA55470081CEBC /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9E71AFA55470081CEBC /* Alamofire-SwiftyJSON.swift */; };
-		031DB9EA1AFA708D0081CEBC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9E91AFA708D0081CEBC /* Event.swift */; };
+		031DB9EA1AFA708D0081CEBC /* CHEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9E91AFA708D0081CEBC /* CHEvent.swift */; };
 		031DB9EC1AFA72540081CEBC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9EB1AFA72540081CEBC /* Comment.swift */; };
+		031DB9EF1AFB4A110081CEBC /* PushEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9EE1AFB4A110081CEBC /* PushEvent.swift */; };
+		031DB9F11AFB4A1D0081CEBC /* WatchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9F01AFB4A1D0081CEBC /* WatchEvent.swift */; };
+		031DB9F31AFB4A250081CEBC /* ForkEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9F21AFB4A250081CEBC /* ForkEvent.swift */; };
+		031DB9F51AFB4A2F0081CEBC /* CreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031DB9F41AFB4A2F0081CEBC /* CreateEvent.swift */; };
 		039C7DE61AEF676E002DAA78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C7DE51AEF676E002DAA78 /* AppDelegate.swift */; };
 		039C7DE81AEF676E002DAA78 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C7DE71AEF676E002DAA78 /* FirstViewController.swift */; };
 		039C7DEA1AEF676E002DAA78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039C7DE91AEF676E002DAA78 /* SecondViewController.swift */; };
@@ -32,8 +36,12 @@
 
 /* Begin PBXFileReference section */
 		031DB9E71AFA55470081CEBC /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
-		031DB9E91AFA708D0081CEBC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		031DB9E91AFA708D0081CEBC /* CHEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHEvent.swift; sourceTree = "<group>"; };
 		031DB9EB1AFA72540081CEBC /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		031DB9EE1AFB4A110081CEBC /* PushEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushEvent.swift; sourceTree = "<group>"; };
+		031DB9F01AFB4A1D0081CEBC /* WatchEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchEvent.swift; sourceTree = "<group>"; };
+		031DB9F21AFB4A250081CEBC /* ForkEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForkEvent.swift; sourceTree = "<group>"; };
+		031DB9F41AFB4A2F0081CEBC /* CreateEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEvent.swift; sourceTree = "<group>"; };
 		039C7DE01AEF676E002DAA78 /* CommitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		039C7DE41AEF676E002DAA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		039C7DE51AEF676E002DAA78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,18 @@
 				031DB9E71AFA55470081CEBC /* Alamofire-SwiftyJSON.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		031DB9ED1AFB49E40081CEBC /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				031DB9E91AFA708D0081CEBC /* CHEvent.swift */,
+				031DB9EE1AFB4A110081CEBC /* PushEvent.swift */,
+				031DB9F01AFB4A1D0081CEBC /* WatchEvent.swift */,
+				031DB9F21AFB4A250081CEBC /* ForkEvent.swift */,
+				031DB9F41AFB4A2F0081CEBC /* CreateEvent.swift */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 		032155381AFA1D6200DFED89 /* Controllers */ = {
@@ -139,8 +159,8 @@
 				03BEA6931AF7A6F200AB18A8 /* Issue.swift */,
 				03BEA6A01AF7A7E800AB18A8 /* User.swift */,
 				03BEA6A21AF7A8C600AB18A8 /* PullRequest.swift */,
-				031DB9E91AFA708D0081CEBC /* Event.swift */,
 				031DB9EB1AFA72540081CEBC /* Comment.swift */,
+				031DB9ED1AFB49E40081CEBC /* Events */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -304,16 +324,20 @@
 			files = (
 				03BEA6A11AF7A7E800AB18A8 /* User.swift in Sources */,
 				03BEA6921AF7A68300AB18A8 /* Commit.swift in Sources */,
+				031DB9F51AFB4A2F0081CEBC /* CreateEvent.swift in Sources */,
 				03BEA6A31AF7A8C600AB18A8 /* PullRequest.swift in Sources */,
 				03BEA69F1AF7A7B700AB18A8 /* AuthManager.swift in Sources */,
 				03BEA6941AF7A6F200AB18A8 /* Issue.swift in Sources */,
 				031DB9EC1AFA72540081CEBC /* Comment.swift in Sources */,
+				031DB9F31AFB4A250081CEBC /* ForkEvent.swift in Sources */,
+				031DB9EF1AFB4A110081CEBC /* PushEvent.swift in Sources */,
 				03BEA69D1AF7A79900AB18A8 /* Utilities.swift in Sources */,
 				039C7DEA1AEF676E002DAA78 /* SecondViewController.swift in Sources */,
 				031DB9E81AFA55470081CEBC /* Alamofire-SwiftyJSON.swift in Sources */,
-				031DB9EA1AFA708D0081CEBC /* Event.swift in Sources */,
+				031DB9EA1AFA708D0081CEBC /* CHEvent.swift in Sources */,
 				039C7DE61AEF676E002DAA78 /* AppDelegate.swift in Sources */,
 				03BEA6901AF7A60B00AB18A8 /* Repository.swift in Sources */,
+				031DB9F11AFB4A1D0081CEBC /* WatchEvent.swift in Sources */,
 				039C7DE81AEF676E002DAA78 /* FirstViewController.swift in Sources */,
 				03BEA6961AF7A73E00AB18A8 /* WebServices.swift in Sources */,
 				03BEA69B1AF7A78E00AB18A8 /* Defs.swift in Sources */,

@@ -10,7 +10,18 @@ import SwiftyJSON
 
 class Comment: CHObject {
 
+    let user:User
+    let createdAt:NSDate
+    let updatedAt:NSDate
+    let body:String
+    
     init(json: JSON) {
+        
+        user = User(json: json["user"])
+        createdAt = Utilities.dateFromString(json["createdAt"].stringValue)
+        updatedAt = Utilities.dateFromString(json["updatedAt"].stringValue)
+        body = json["body"].stringValue
+        
         super.init(url: json["url"].string);
     }
 }

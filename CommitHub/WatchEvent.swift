@@ -1,5 +1,5 @@
 //
-//  Event.swift
+//  WatchEvent.swift
 //  CommitHub
 //
 //  Created by Josh Wright on 5/7/15.
@@ -8,9 +8,10 @@
 
 import SwiftyJSON
 
-class Event: CHObject {
+class WatchEvent: CHEvent {
 
-    init(json: JSON) {
-        super.init(url: json["url"].string);
+    override init(json:JSON){
+        
+        super.init(json: json)
     }
 }

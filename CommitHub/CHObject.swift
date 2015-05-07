@@ -8,17 +8,18 @@
 
 import SwiftyJSON
 
-class CHObject : NSObject{
+class CHObject {
     
     /// The location of this object on the GitHub API.
-    let url:String;
+    let url:String
     
+    /// All objects must have a URL for where they are on the github API. Exceptions include events.
     init(url: String?) {
         if let url = url{
-            /// TODO: parse off base url
-            self.url = url;
+            self.url = url.stringByReplacingOccurrencesOfString("https://api.github.com/", withString: "")
         }else{
-            self.url = "";
+            self.url = ""
         }
+        println(self.url)
     }
 }

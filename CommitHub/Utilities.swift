@@ -10,4 +10,7 @@ import Foundation
 
 class Utilities: NSObject {
     
+    static func dateFromString(string: String) -> NSDate {
+        return NSDate()
+    }
 }
