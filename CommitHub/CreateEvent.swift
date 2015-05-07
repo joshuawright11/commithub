@@ -10,7 +10,7 @@ import SwiftyJSON
 
 class CreateEvent: CHEvent {
 
-    override init(json:JSON){
+    required init(json:JSON){
         
         super.init(json: json)
     }

@@ -12,7 +12,7 @@ class ForkEvent: CHEvent {
 
     let forkee:Repository
     
-    override init(json:JSON){
+    required init(json:JSON){
         
         forkee = Repository(json: json["payload"]["forkee"])
         

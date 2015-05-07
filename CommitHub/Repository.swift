@@ -26,7 +26,7 @@ class Repository: CHObject {
     let openIssuesCount:Int
     let defaultBranch:String
     
-    init(json: JSON) {
+    required init(json: JSON) {
         self.name = json["name"].stringValue;
         self.fullName = json["name"].stringValue
         self.owner = User(json: json["owner"])
@@ -43,6 +43,6 @@ class Repository: CHObject {
         self.openIssuesCount = json["open_issues_count"].intValue
         self.defaultBranch = json["default_branch"].stringValue
         
-        super.init(url: json["url"].string);
+        super.init(json: json);
     }
 }

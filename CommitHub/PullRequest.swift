@@ -12,10 +12,10 @@ class PullRequest: CHObject {
     
     let issue: Issue
     
-    init(json: JSON) {
+    required init(json: JSON) {
         
         issue = Issue(json: json)
         
-        super.init(url: json["url"].string);
+        super.init(json: json);
     }
 }

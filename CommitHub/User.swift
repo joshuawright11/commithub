@@ -22,7 +22,7 @@ class User: CHObject {
     let followingCount:Int
     let createdAt:NSDate
     
-    init(json: JSON) {
+    required init(json: JSON) {
         
         username = json["username"].stringValue
         avatarURL = json["avatar_url"].stringValue
@@ -36,6 +36,6 @@ class User: CHObject {
         followingCount = json["following"].intValue
         createdAt = Utilities.dateFromString(json["created_at"].stringValue)
         
-        super.init(url: json["url"].string);
+        super.init(json: json)
     }
 }

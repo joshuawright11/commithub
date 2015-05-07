@@ -20,7 +20,7 @@ class Issue: CHObject {
     let body:String
     let user:User
     
-    init(json: JSON) {
+    required init(json: JSON) {
         
         number = json["number"].intValue
         title = json["title"].stringValue
@@ -32,6 +32,6 @@ class Issue: CHObject {
         body = json["body"].stringValue
         user = User(json: json["user"])
         
-        super.init(url: json["url"].string);
+        super.init(json: json);
     }
 }

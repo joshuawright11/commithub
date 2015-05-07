@@ -17,7 +17,7 @@ class Commit: CHObject {
     let author:User
     let committer:User
     
-    init(json: JSON) {
+    required init(json: JSON) {
         sha = json["sha"].stringValue
         message = json["commit"]["message"].stringValue
         date = Utilities.dateFromString(json["commit"]["authot"]["date"].stringValue)
@@ -25,6 +25,6 @@ class Commit: CHObject {
         author = User(json: json["author"])
         committer = User(json: json["committer"])
         
-        super.init(url: json["url"].string);
+        super.init(json: json);
     }
 }

@@ -13,7 +13,7 @@ class PushEvent: CHEvent {
     let branch:String
     let commits:[Commit]
     
-    override init(json:JSON){
+    required init(json:JSON){
 
         var commitsArray = [Commit]()
         for (index: String, subJson: JSON) in json["payload"]["commits"] {

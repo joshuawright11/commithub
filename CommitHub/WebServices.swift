@@ -23,8 +23,8 @@ class WebServices: NSObject {
         let method:Alamofire.Method
         
         // these will be on the keychain
-        let testuser = "joshuawright11"
-        let testpasswd = "U8sspg8w"
+        let testuser = "bogusaccount"
+        let testpasswd = "bogusaccount1"
         
         init(url:String, method:Alamofire.Method){
             self.url = url
@@ -65,26 +65,34 @@ class WebServices: NSObject {
     /// MARK: - Current User Calls
 
     static func getCurrentUser(callback: ((user: User) -> ())?){
-        WebServices.doGetRequest("user", completionClosure: { (json) -> () in
-            
+        doGetRequest("user", completionClosure: { (json) -> () in
+            if let callback = callback {
+                callback(user: User(json: json))
+            }
         })
     }
     
     static func getCurrentUserIssues(callback: ((issues: [Issue]) -> ())?){
-        WebServices.doGetRequest("user/issues", completionClosure: { (json) -> () in
-            
+        doGetRequest("user/issues", completionClosure: { (json) -> () in
+            if let callback = callback {
+                callback(issues: CHObject.initArrayWithJSON(json))
+            }
         })
     }
     
     static func getCurrentUserRepos(callback: ((repos: [Repository]) -> ())?){
-        WebServices.doGetRequest("user/repos", completionClosure: { (json) -> () in
-            
+        doGetRequest("user/repos", completionClosure: { (json) -> () in
+            if let callback = callback {
+                callback(repos: CHObject.initArrayWithJSON(json))
+            }
         })
     }
     
     static func getCurrentUserPullRequests(callback: ((requests: [PullRequest]) -> ())?){
-        WebServices.doGetRequest("user/repos", completionClosure: { (json) -> () in
-            
+        doGetRequest("user/repos", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
         // find ones that are a pull request
     }
@@ -107,100 +115,128 @@ class WebServices: NSObject {
     }
     
     static func getUserStarred(user:User, callback: ((starred: [Repository]) -> ())?){
-        WebServices.doGetRequest("\(user.url)/starred", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(user.url)/starred", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getUserFollowers(user:User, callback: ((followers: [User]) -> ())?){
-        WebServices.doGetRequest("\(user.url)/followers", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(user.url)/followers", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getUserFollowing(user:User, callback: ((following: [User]) -> ())?){
-        WebServices.doGetRequest("\(user.url)/following", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(user.url)/following", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getUserRepos(user:User, callback: ((repos: [Repository]) -> ())?){
-        WebServices.doGetRequest("\(user.url)/repos", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(user.url)/repos", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getUserActivity(user:User, callback: ((activity: [CHEvent]) -> ())?){
-        WebServices.doGetRequest("\(user.url)/events", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(user.url)/events", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getUserWatchedRepos(user: User, callback: ((watched: [Repository]) -> ())?){
-        WebServices.doGetRequest("\(user.url)/subscriptions", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(user.url)/subscriptions", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     /// MARK: - Repo Calls
     
     static func getRepoCommits(repo:Repository, callback: ((commits: [Commit]) -> ())?){
-        WebServices.doGetRequest("\(repo.url)/commits", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(repo.url)/commits", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getRepoBranches(repo:Repository, callback: ((branchNames: [String]) -> ())?){
-        WebServices.doGetRequest("\(repo.url)/branches", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(repo.url)/branches", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getRepoReleases(repo: Repository, callback: ((releaseNames: [String]) -> ())?){
-        WebServices.doGetRequest("\(repo.url)/releases", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(repo.url)/releases", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getRepoCollaborators(repo:Repository, callback: ((collaborators: [User]) -> ())?){
-        WebServices.doGetRequest("\(repo.url)/collaborators", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(repo.url)/collaborators", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getRepoIssues(repo:Repository, callback: ((issues: [Issue]) -> ())?){
-        WebServices.doGetRequest("\(repo.url)/issues", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(repo.url)/issues", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getRepoPullRequests(repo:Repository, callback: ((requests: [PullRequest]) -> ())?){
-        WebServices.doGetRequest("\(repo.url)/pulls", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(repo.url)/pulls", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     /// MARK: - Issue Calls
     
     static func getIssue(repo:Repository, number:Int, callback: ((issue: Issue) -> ())?){
-        WebServices.doGetRequest("\(repo.url)/issues/\(number)", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(repo.url)/issues/\(number)", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     static func getIssueComments(issue:Issue, callback: ((comments: [Comment]) -> ())?){
-        WebServices.doGetRequest("\(issue.url)/comments", completionClosure: { (json) -> () in
-            
+        doGetRequest("\(issue.url)/comments", completionClosure: { (json) -> () in
+            if let callback = callback {
+                
+            }
         })
     }
     
     /// MARK: - Explore Calls
     
     static func getTrendingRepos(language:String, timeframe:TimeFrame, callback: ((repos: [Repository]) -> ())?){
-        WebServices.doGetRequest("search/repositories", completionClosure: { (json) -> () in
-            
+        doGetRequest("search/repositories", completionClosure: { (json) -> () in
+            if let callback = callback {
+                //filter by language etc
+            }
         })
-        //filter by language etc
     }
-    
 }

@@ -13,11 +13,11 @@ class CHEvent: CHObject {
     let user:User
     let repo:Repository
     
-    init(json: JSON) {
+    required init(json: JSON) {
         
         user = User(json: json["actor"])
         repo = Repository(json: json["repo"])
         
-        super.init(url: json["url"].string);
+        super.init(json: json);
     }
 }

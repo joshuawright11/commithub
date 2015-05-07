@@ -12,5 +12,11 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        WebServices.getCurrentUserIssues { (issues) -> () in
+            for issue:Issue in issues{
+                println(issue.title)
+            }
+        }
     }
 }
