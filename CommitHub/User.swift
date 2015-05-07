@@ -24,7 +24,7 @@ class User: CHObject {
     
     required init(json: JSON) {
         
-        username = json["username"].stringValue
+        username = json["login"].stringValue
         avatarURL = json["avatar_url"].stringValue
         name = json["name"].stringValue
         company = json["company"].stringValue

@@ -16,7 +16,6 @@ class CHObject {
     /// All objects must have a URL for where they are on the github API. Exceptions include events.
     required init(json: JSON) {
         self.url = json["url"].stringValue.stringByReplacingOccurrencesOfString("https://api.github.com/", withString: "")
-        println(self.url)
     }
     
     static func initArrayWithJSON<T:CHObject>(json: JSON) -> [T] {

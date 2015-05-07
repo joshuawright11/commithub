@@ -27,6 +27,7 @@ class Repository: CHObject {
     let defaultBranch:String
     
     required init(json: JSON) {
+        
         self.name = json["name"].stringValue;
         self.fullName = json["name"].stringValue
         self.owner = User(json: json["owner"])

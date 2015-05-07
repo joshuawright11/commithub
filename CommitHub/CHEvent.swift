@@ -20,4 +20,26 @@ class CHEvent: CHObject {
         
         super.init(json: json);
     }
+    
+    static func initArrayWithJSON(json: JSON) -> [CHEvent] {
+        
+        var array = [CHEvent]()
+        
+        for (index: String, subJson: JSON) in json {
+            switch subJson["type"].stringValue{
+            case "PushEvent":
+                array.append(PushEvent(json: subJson))
+            case "WatchEvent":
+                array.append(WatchEvent(json: subJson))
+            case "ForkEvent":
+                array.append(ForkEvent(json: subJson))
+            case "CreateEvent":
+                array.append(CreateEvent(json: subJson))
+            default:
+                array.append(CHEvent(json: subJson))
+            }
+        }
+        
+        return array;
+    }
 }
