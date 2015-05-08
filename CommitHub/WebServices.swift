@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import Locksmith
 
 class WebServices: NSObject {
     
@@ -19,12 +20,10 @@ class WebServices: NSObject {
     /// Base class for HTTP Requests
     private class HTTPRequest {
         let BASE_URL = "https://api.github.com/"
+        let kKeychainUserAccount = "CommitHub"
+        
         let url: String
         let method:Alamofire.Method
-        
-        // these will be on the keychain
-        let testuser = "bogusaccount"
-        let testpasswd = "bogusaccount1"
         
         init(url:String, method:Alamofire.Method){
             self.url = url
@@ -45,10 +44,19 @@ class WebServices: NSObject {
         }
         
         private func doHeaders(){
-            let plainString = "\(testuser):\(testpasswd)" as NSString
-            let plainData = plainString.dataUsingEncoding(NSUTF8StringEncoding)
-            let base64String = plainData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
-            Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["Authorization": "Basic " + base64String!, "Accept":"application/vnd.github.v3+json"]
+            
+            let (dict, error) = Locksmith.loadDataForUserAccount(kKeychainUserAccount)
+            
+            let username:String? = dict?["username"] as? String
+            let password:String? = dict?["password"] as? String
+            
+            if let username = username, password = password {
+                
+                let plainString = "\(username):\(password)" as NSString
+                let plainData = plainString.dataUsingEncoding(NSUTF8StringEncoding)
+                let base64String = plainData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+                Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["Authorization": "Basic " + base64String!, "Accept":"application/vnd.github.v3+json"]
+            }
         }
     }
     
@@ -60,6 +68,21 @@ class WebServices: NSObject {
                 callback(json: json)
             }
         }
+    }
+    
+    /// MARK: - Authentication Calls
+    
+    static func testCredentials(username: String, password:String, callback: ((user: User) -> ())?){
+        
+        let plainString = "\(username):\(password)" as NSString
+        let plainData = plainString.dataUsingEncoding(NSUTF8StringEncoding)
+        let base64String = plainData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+        Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["Authorization": "Basic " + base64String!, "Accept":"application/vnd.github.v3+json"]
+        doGetRequest("user", completionClosure: { (json) -> () in
+            if let callback = callback {
+                callback(user: User(json: json))
+            }
+        })
     }
     
     /// MARK: - Current User Calls

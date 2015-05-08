@@ -38,4 +38,23 @@ class User: CHObject {
         
         super.init(json: json)
     }
+    
+    func toJSON() -> JSON{
+        
+        var json: JSON = [
+            "login":username,
+            "avatar_url":avatarURL,
+            "name":name,
+            "company":company,
+            "blog":blog,
+            "location":location,
+            "email":email,
+            "public_repos":publicReposCount,
+            "followers":followersCount,
+            "following":followingCount,
+            "created_at":Utilities.stringFromDate(createdAt)
+        ]
+        
+        return json;
+    }
 }
