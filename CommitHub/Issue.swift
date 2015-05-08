@@ -26,9 +26,9 @@ class Issue: CHObject {
         title = json["title"].stringValue
         open = json["state"].stringValue != "closed"
         commentsCount = json["comments"].intValue
-        createdAt = Utilities.dateFromString(json["created_at"].stringValue)
-        updatedAt = Utilities.dateFromString(json["updated_at"].stringValue)
-        closedAt = Utilities.dateFromString(json["closed_at"].stringValue)
+        createdAt = dateFromString(json["created_at"].stringValue)
+        updatedAt = dateFromString(json["updated_at"].stringValue)
+        closedAt = dateFromString(json["closed_at"].stringValue)
         body = json["body"].stringValue
         user = User(json: json["user"])
         

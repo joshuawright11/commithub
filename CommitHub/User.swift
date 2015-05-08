@@ -34,7 +34,7 @@ class User: CHObject {
         publicReposCount = json["public_repos"].intValue
         followersCount = json["followers"].intValue
         followingCount = json["following"].intValue
-        createdAt = Utilities.dateFromString(json["created_at"].stringValue)
+        createdAt = dateFromString(json["created_at"].stringValue)
         
         super.init(json: json)
     }
@@ -52,7 +52,7 @@ class User: CHObject {
             "public_repos":publicReposCount,
             "followers":followersCount,
             "following":followingCount,
-            "created_at":Utilities.stringFromDate(createdAt)
+            "created_at":stringFromDate(createdAt)
         ]
         
         return json;

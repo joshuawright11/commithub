@@ -7,3 +7,5 @@
 //
 
 import Foundation
+
+let kKeychainUserAccount = "CommitHub"

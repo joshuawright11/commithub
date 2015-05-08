@@ -7,30 +7,35 @@
 //
 
 import Foundation
+import UIKit
 
-class Utilities: NSObject {
+public func alert(string:String, vc:UIViewController){
     
-    static func dateFromString(string: String) -> NSDate {
-        
-        let dateFormatter = NSDateFormatter()
-        
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "YYYY-MM-DDTHH:MM:SSZ"
-        
-        let date: NSDate? = dateFormatter.dateFromString(string);
-        
-        return NSDate()
-    }
+    var alert = UIAlertController(title: "Alert", message: string, preferredStyle: UIAlertControllerStyle.Alert)
+    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+    vc.presentViewController(alert, animated: true, completion: nil)
+}
+
+public func dateFromString(string: String) -> NSDate {
     
-    static func stringFromDate(date: NSDate) -> String {
-        
-        let dateFormatter = NSDateFormatter()
-        
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "YYYY-MM-DDTHH:MM:SSZ"
-        
-        let string: String? = dateFormatter.stringFromDate(date);
-        
-        return "2000-11-11T11:11:11Z"
-    }
+    let dateFormatter = NSDateFormatter()
+    
+    dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+    dateFormatter.dateFormat = "YYYY-MM-DDTHH:MM:SSZ"
+    
+    let date: NSDate? = dateFormatter.dateFromString(string);
+    
+    return NSDate()
+}
+
+public func stringFromDate(date: NSDate) -> String {
+    
+    let dateFormatter = NSDateFormatter()
+    
+    dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+    dateFormatter.dateFormat = "YYYY-MM-DDTHH:MM:SSZ"
+    
+    let string: String? = dateFormatter.stringFromDate(date);
+    
+    return "2000-11-11T11:11:11Z"
 }

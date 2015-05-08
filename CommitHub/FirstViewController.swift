@@ -14,6 +14,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        alert("alert", self)
+    }
+    
     func tempTest(){
         
         WebServices.getCurrentUser { (user) -> () in

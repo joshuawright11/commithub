@@ -36,7 +36,7 @@ public class AuthManager : NSObject{
             if username == user.username{
                 
                 let dict:Dictionary = ["username":username,"password":password]
-                let error = Locksmith.saveData(dict, forUserAccount: "CommitHub")
+                let error = Locksmith.saveData(dict, forUserAccount: kKeychainUserAccount)
                 
                 self.currentUser = user
             }
@@ -49,7 +49,7 @@ public class AuthManager : NSObject{
     
     public static func logout() {
         user = nil;
-        Locksmith.deleteDataForUserAccount("CommitHub")
+        Locksmith.deleteDataForUserAccount(kKeychainUserAccount)
         clearUser()
         
     }

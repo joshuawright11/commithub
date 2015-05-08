@@ -20,7 +20,6 @@ class WebServices: NSObject {
     /// Base class for HTTP Requests
     private class HTTPRequest {
         let BASE_URL = "https://api.github.com/"
-        let kKeychainUserAccount = "CommitHub"
         
         let url: String
         let method:Alamofire.Method

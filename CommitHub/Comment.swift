@@ -18,8 +18,8 @@ class Comment: CHObject {
     required init(json: JSON) {
         
         user = User(json: json["user"])
-        createdAt = Utilities.dateFromString(json["createdAt"].stringValue)
-        updatedAt = Utilities.dateFromString(json["updatedAt"].stringValue)
+        createdAt = dateFromString(json["createdAt"].stringValue)
+        updatedAt = dateFromString(json["updatedAt"].stringValue)
         body = json["body"].stringValue
         
         super.init(json: json);

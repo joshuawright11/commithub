@@ -20,7 +20,7 @@ class Commit: CHObject {
     required init(json: JSON) {
         sha = json["sha"].stringValue
         message = json["commit"]["message"].stringValue
-        date = Utilities.dateFromString(json["commit"]["authot"]["date"].stringValue)
+        date = dateFromString(json["commit"]["authot"]["date"].stringValue)
         commentCount = json["commit"]["comment_count"].intValue
         author = User(json: json["author"])
         committer = User(json: json["committer"])
